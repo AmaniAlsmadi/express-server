@@ -14,7 +14,7 @@ describe('API server', () => {
 
     it("person Data", async () => {
         const personData = { name: "Amani", age: 28, gender: "Female" };
-        const res = await request.post("/data").send({ personData });
-        expect(res.text).toEqual("33");
+        const res = await request.post("/person").send(personData);
+        expect(res.text).toEqual("New Age : 33");
 });
 });
