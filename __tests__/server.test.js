@@ -11,10 +11,9 @@ describe('API server', () => {
         expect(res.status).toEqual(200);
         expect(res.text).toEqual('Hello World');
     });
-
-    it("person Data", async () => {
-        const personData = { name: "Amani", age: 28, gender: "Female" };
-        const res = await request.post("/person").send(personData);
-        expect(res.text).toEqual("New Age : 33");
-});
+    it('person page work', async() => {
+        const res =await request.post('/person?age=28');
+        expect(res.status).toEqual(200);
+        expect(res.text).toEqual('New Age : 33');
+    });
 });

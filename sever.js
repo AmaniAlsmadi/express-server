@@ -12,12 +12,12 @@ app.get('/', (req,res) => {
 })
  
 app.post('/person',( req ,res) =>{
-   /* const personData = { 'name': req.query.name,
+   const personData = { 'name': req.query.name,
         'age': req.query.age,
         'gender' : req.query.gender
-    }*/
+    }
 
-    const personData = { name: "Amani", age: 28, gender: "Female" };
+    //const personData = { name: "Amani", age: 28, gender: "Female" };
     console.log(personData);
     res.status(200).send(`New Age : ${parseInt(personData.age) + 5}`);
   });
